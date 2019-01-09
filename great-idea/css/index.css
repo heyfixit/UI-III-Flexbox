@@ -146,3 +146,21 @@ footer {
     font-size: 14px;
 }
 
+.services-about, .service-descriptions {
+    padding: 30px 0;
+    border-bottom: 1px solid black;
+}
+
+.services-about h1 {
+    font-size: 30px;
+}
+
+.service-descriptions {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service-descriptions section {
+    width: 419px;
+    height: 251px;
+}
