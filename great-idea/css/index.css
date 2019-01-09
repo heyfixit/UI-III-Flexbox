@@ -115,7 +115,7 @@ nav a:first-child {
     font-size: 85px;
 }
 
-.jumbo-left button {
+.jumbo-left button, .service-descriptions button {
     margin-top: 5px;
     padding: 3px 50px;
     background: white;
@@ -158,9 +158,22 @@ footer {
 .service-descriptions {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+
 }
 
 .service-descriptions section {
     width: 419px;
     height: 251px;
+    border: 1px solid black;
+    padding: 23px;
+    margin-bottom: 30px;
+    background-color: #F4F3F4;
+}
+
+.service-description button {
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 5px 30px;
+    font-size: 14px;
 }
