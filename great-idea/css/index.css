@@ -115,7 +115,8 @@ nav a:first-child {
     font-size: 85px;
 }
 
-.jumbo-left button, .service-descriptions button {
+.jumbo-left button, .service-descriptions button,
+.product-description button {
     margin-top: 5px;
     padding: 3px 50px;
     background: white;
@@ -146,16 +147,17 @@ footer {
     font-size: 14px;
 }
 
-.services-about, .service-descriptions {
+.services-about, .service-descriptions,
+.product-about, .product-descriptions {
     padding: 30px 0;
     border-bottom: 1px solid black;
 }
 
-.services-about h1 {
+.services-about h1, .product-about h1 {
     font-size: 30px;
 }
 
-.service-descriptions {
+.service-descriptions, .product-descriptions {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -165,13 +167,27 @@ footer {
 .service-descriptions section {
     width: 419px;
     height: 251px;
-    border: 1px solid black;
     padding: 23px;
-    margin-bottom: 30px;
-    background-color: #F4F3F4;
 }
 
-.service-description button {
+.service-descriptions section {
+    margin-bottom: 30px;
+    background-color: #F4F3F4;
+    border: 1px solid black;
+}
+
+.product-descriptions section {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-descriptions section h3 {
+    font-size: 25px;
+}
+
+.service-description button, .product-description button {
     border-radius: 5px;
     margin-top: 20px;
     padding: 5px 30px;
@@ -189,8 +205,7 @@ footer {
 }
 
 ul {
-    list-style-type: square;
-    margin-left: 19px;
+    list-style: square inside;
 }
 
 li {
@@ -199,4 +214,46 @@ li {
 
 img.services-header-img {
     width: 876px;
+}
+
+@keyframes rotator {
+    to {transform: rotate(360deg);}
+}
+
+.product-descriptions img.code-circle {
+    width: 300px;
+    margin-left: 50px;
+}
+
+.medium img.code-circle, .premium img.code-circle {
+    animation-name: rotator;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 20s;
+    z-index: -1;
+}
+
+.premium img.code-circle {
+    animation-duration: 1s;
+}
+
+.testimonial {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.testimonial section {
+    margin-right: 40px;
+    font-size: 20px;
+}
+
+.testimonial p {
+    font-style: italic;
+    margin: 0 15px;
+}
+
+.testimonial-author {
+    padding-top: 20px;
+    text-align: right;
 }
